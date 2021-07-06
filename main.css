@@ -1,0 +1,36 @@
+html {
+    font-size: 25px;
+    background-image: url(imgs/starters1.jpg);
+    background-size: 100%;
+    font-family:'Courier New', Courier, monospace
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+
+img {
+    width: 130px;
+    height: 130px; 
+}
+
+
+.btn{
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-style: solid;
+    background-color: rgb(230, 230, 230);
+    
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    border-color: turquoise;
+}
