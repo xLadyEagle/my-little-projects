@@ -32,8 +32,8 @@ buttons.forEach((button) => {
 
     if (playerScore === 5 || computerScore === 5){
         declareWinner();
+        
     }
-
     });
 });   
 
@@ -82,11 +82,27 @@ const computer = document.querySelector("#computer-score");
 
 // When the game ends (5 points)
 
+const returnMainBtn = document.querySelector("#retry-btn");
+returnMainBtn.style.visibility = "hidden";
+returnMainBtn.addEventListener("click",() => location.reload());
+
 function declareWinner(){
-    const endGame = document.querySelector("#end-game");
+    
     if (playerScore > computerScore){
-        endGame.innerText = "Congrats! You won!";
+        text.innerText = "Congrats! You won!";
+        returnMainBtn.style.visibility = "visible";
+        returnMainBtn.innerText = "PLAY AGAIN";
     } else {
-        endGame.innerText = "You lost...";
+        text.innerText = "You lost...";
+        returnMainBtn.style.visibility = "visible";
+        returnMainBtn.innerText = "TRY AGAIN?";
     }
+
+}
+
+
+function resetGame(){
+    text.innerText = "";
+    playerScore = 0;
+    computerScore = 0;
 }
