@@ -102,7 +102,7 @@ function declareWinner(){
 
 
 function resetGame(){
-    text.innerText = "";
+    //text.innerText = "";
     playerScore = 0;
     computerScore = 0;
 }
