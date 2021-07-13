@@ -32,7 +32,7 @@ buttons.forEach((button) => {
 
     if (playerScore === 5 || computerScore === 5){
         declareWinner();
-        
+        resetGame(); 
     }
     });
 });   
